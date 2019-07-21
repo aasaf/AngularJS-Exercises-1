@@ -1,0 +1,32 @@
+const mySelf = {name:"asaf", age:26 ,adress:{city:"rishon", company:"IDF"},family:[{name:"shaul"},{age:26},{city:"rishon"}]}
+
+function c(msg)
+{
+  console.log(msg)
+}
+function printArray(arr)
+{
+  for(var i in arr){
+    console.log(arr[i])}
+}
+
+function printObject(obj)
+{ 
+for (let n in obj){
+  if(Array.isArray(obj[n])){
+    //console.log("object")
+    printArray(obj[n]);
+  }
+  else if(typeof obj[n] ==='object'){
+   // console.log("object")
+    console.log(JSON.stringify((obj[n])));
+  }
+  else{
+    //console.log("string")
+    console.log(`$(n): ${obj[n]}`)
+  }
+}
+}
+
+
+printObject(mySelf)
