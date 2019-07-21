@@ -1,0 +1,69 @@
+function CreateMobilePhone(model,size,price,number)
+{
+  var result = {}
+  result.model = model
+  result.size = size
+  result.price = price
+  result.number = number
+  result.getNumber = function()
+  {
+    return result.number
+  }
+  result.setNumber = function(num)
+  {
+    result.number = num
+  }
+  return result
+  
+}
+  function MobilePhone(model,size,price,number)
+{ 
+  
+     var _model 
+    this.size = size
+  
+    var _price = 0
+    this.number = number
+  	
+ 
+  this.getNumber = function()
+  {
+    return this.number
+  }
+  if(number>0 ){
+    
+  this.setNumber = function(num)
+  {
+    if(num>number){
+    this.number = num
+    }
+  }
+}
+   this.getModel = function()
+  {
+    return this.model
+  }
+    
+ 
+  this.setModel = function(num)
+  {
+     if(num.length>4){
+    this.model = num
+  }
+  }
+  
+}
+
+  var phone1 = new MobilePhone("iphone", 56,1390,3);
+console.log(phone1)
+var numm = phone1.getNumber()
+phone1.setNumber(5)
+var numm = phone1.getNumber()
+console.log(numm)
+phone1.setModel("hhfff")
+console.log(phone1)
+
+
+//var phone2 = new CreateMobilePhone("galaxt", 34,390,3);
+//var numm2 = phone2.getNumber()
+//console.log(numm2)
